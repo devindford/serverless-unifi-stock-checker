@@ -1,7 +1,6 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-// SNS client
 const webhookUrl = process.env.WEBHOOK
 const url = `https://store.ui.com/us/en/collections/${process.env.PRODUCT_SLUG}`;
 
