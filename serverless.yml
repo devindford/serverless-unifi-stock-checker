@@ -1,0 +1,24 @@
+service: unifi-stock-checker
+frameworkVersion: '3'
+provider:
+  name: aws
+  runtime: nodejs18.x
+  environment: 
+    WEBHOOK: ${ssm:/unifi-stock-checker/webhook}  # fetch from SSM
+    PRODUCT_SLUG: "unifi-camera-security-special-wifi-doorbell"
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "sns:Publish"
+      Resource: "*"
+    - Effect: "Allow"
+      Action:
+        - "ssm:GetParameter"
+      Resource: "arn:aws:ssm:us-east-1:485585223748:parameter/unifi-stock-checker/webhook"
+functions:
+  checkStock:
+    handler: index.checkStock
+    events:
+      - schedule: rate(15 minutes)
+plugins:
+  - serverless-offline
