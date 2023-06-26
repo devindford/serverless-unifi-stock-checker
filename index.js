@@ -20,7 +20,6 @@ module.exports.checkStock = async (event) => {
         content: `The item at ${url} is back in stock!`
       });
       console.log('Sent message to Discord');
-      console.log('Sent SMS');
     } else {
       console.log('Not in stock');
     }
