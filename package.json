@@ -1,13 +1,9 @@
 {
   "name": "unifi-stock-checker",
   "version": "1.0.0",
-  "description": "",
-  "main": "unifi.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
+  "description": "A lambda to scrape the unifi stock of an item and send a message to discord when in stock",
+  "main": "index.js",
+  "author": "devin.d.ford@gmail.com",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.4.0",
