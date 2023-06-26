@@ -5,7 +5,7 @@ provider:
   runtime: nodejs18.x
   environment: 
     WEBHOOK: ${ssm:/unifi-stock-checker/webhook}  # fetch from SSM
-    PRODUCT_SLUG: "unifi-camera-security-special-wifi-doorbell"
+    PRODUCT_SLUG: "pro/category/all-cameras-nvrs/products/uvc-g4-doorbell-pro"
   iamRoleStatements:
     - Effect: "Allow"
       Action:

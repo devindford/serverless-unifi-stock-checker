@@ -2,7 +2,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 
 const webhookUrl = process.env.WEBHOOK
-const url = `https://store.ui.com/us/en/collections/${process.env.PRODUCT_SLUG}`;
+const url = `https://store.ui.com/us/en/${process.env.PRODUCT_SLUG}`;
 
 module.exports.checkStock = async (event) => {
   try {
