@@ -9,10 +9,6 @@ provider:
   iamRoleStatements:
     - Effect: "Allow"
       Action:
-        - "sns:Publish"
-      Resource: "*"
-    - Effect: "Allow"
-      Action:
         - "ssm:GetParameter"
       Resource: "arn:aws:ssm:us-east-1:485585223748:parameter/unifi-stock-checker/webhook"
 functions:
