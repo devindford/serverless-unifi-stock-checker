@@ -16,7 +16,7 @@ module.exports.checkStock = async (event) => {
 
     if (isButtonActive) {
       await axios.post(webhookUrl, {
-        content: `The item at ${url} is back in stock!`
+        content: `@everyone The item at ${url} is back in stock!`
       });
       console.log('Sent message to Discord');
     } else {
